@@ -242,7 +242,6 @@ ul, ol {
     position: relative;
     top: -35%;
     min-height: 25pt;
-    max-height: 40pt;
 }
 .headerimg-talks {
     position: relative;
@@ -261,6 +260,24 @@ ul, ol {
     max-width: 144px;
     height: auto;
     width: auto;
+}
+
+.glance-card {
+    border-radius: 0.5em;
+}
+
+.glance-card .header {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.animated-size {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.animated-size:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
 .border-white { border-color: white}
@@ -404,14 +421,15 @@ ul, ol {
     color: #bf382e;
     background-color: #fff;
     border: 1px solid #bf382e;
-    border-radius: 0
+    border-radius: 1em;
+    transition: box-shadow 0.3s ease;
 }
 .btn:active{
   background-color: #bf382e;
 }
 
 .btn:hover, .btn:focus{
-    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn.active {
